@@ -1,0 +1,122 @@
+/* ─────────────────────────────────────────
+   sections.css — section-specific layouts
+───────────────────────────────────────── */
+
+/* ── HERO ── */
+#hero {
+  min-height:     100vh;
+  display:        flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top:    9rem;
+  padding-bottom: 4rem;
+  position:       relative;
+}
+
+.hero-tag {
+  font-family:    var(--mono);
+  font-size:      0.73rem;
+  color:          var(--accent);
+  letter-spacing: 0.15em;
+  margin-bottom:  1.4rem;
+  display:        flex;
+  align-items:    center;
+  gap:            0.75rem;
+}
+.hero-tag::before {
+  content:  '';
+  display:  inline-block;
+  width:    32px;
+  height:   1px;
+  background: var(--accent);
+}
+
+.hero-name {
+  font-size:       clamp(2.8rem, 8vw, 5.5rem);
+  font-weight:     700;
+  line-height:     1.05;
+  letter-spacing:  -0.025em;
+  margin-bottom:   0.5rem;
+}
+.hero-subtitle {
+  font-family:   var(--mono);
+  font-size:     clamp(0.78rem, 1.8vw, 1rem);
+  color:         var(--muted);
+  margin-bottom: 1.75rem;
+}
+.hero-desc {
+  max-width:     580px;
+  color:         var(--text-muted);
+  font-size:     0.97rem;
+  margin-bottom: 2.5rem;
+  line-height:   1.85;
+}
+.hero-cta {
+  display:       flex;
+  gap:           1rem;
+  flex-wrap:     wrap;
+  margin-bottom: 3rem;
+}
+.hero-stats {
+  display:     flex;
+  gap:         2.5rem;
+  flex-wrap:   wrap;
+  border-top:  1px solid var(--border);
+  padding-top: 2rem;
+}
+.hero-stat { display: flex; flex-direction: column; }
+.hero-stat .stat-num   { font-size: 1.6rem; }
+.hero-stat .stat-label { font-size: 0.78rem; }
+
+/* Avatar */
+.avatar-wrap {
+  position:  absolute;
+  right:     2rem;
+  top:       50%;
+  transform: translateY(-50%);
+}
+.avatar-hex { width: 280px; height: 280px; }
+
+/* ── ABOUT ── */
+.about-grid {
+  display:               grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap:                   4rem;
+  align-items:           start;
+}
+.about-text p { color: var(--text-muted); margin-bottom: 1.1rem; font-size: 0.95rem; }
+
+.about-cards {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   1rem;
+}
+
+/* ── SKILLS ── */
+.skills-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:                   1.25rem;
+}
+
+/* ── PROJECTS ── */
+.projects-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:                   1.5rem;
+}
+
+/* ── CONTACT ── */
+.contact-wrap {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   4rem;
+  align-items:           start;
+}
+.contact-intro {
+  color:         var(--text-muted);
+  font-size:     0.95rem;
+  line-height:   1.85;
+  margin-bottom: 2rem;
+}
+.contact-links { display: flex; flex-direction: column; gap: 0.9rem; }

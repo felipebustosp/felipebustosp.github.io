@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Felipe Bustos Ponce — Quality Engineering Lead | Test Architecture & Governance" />
+  <title>Felipe Bustos Ponce — Quality Engineering Lead</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="Nav.closeMobile()" aria-label="Cerrar menú">✕</button>
+    <nav>
+      <a href="#about"      onclick="Nav.closeMobile()" data-i18n="nav.about">Sobre mí</a>
+      <a href="#experience" onclick="Nav.closeMobile()" data-i18n="nav.experience">Experiencia</a>
+      <a href="#skills"     onclick="Nav.closeMobile()" data-i18n="nav.skills">Habilidades</a>
+      <a href="#projects"   onclick="Nav.closeMobile()" data-i18n="nav.projects">Proyectos</a>
+      <a href="#contact"    onclick="Nav.closeMobile()" data-i18n="nav.contact">Contacto</a>
+    </nav>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <header id="navbar">
+    <a href="#hero" class="nav-logo">FBP // QE Lead</a>
+    <ul class="nav-links">
+      <li><a href="#about"      data-i18n="nav.about">Sobre mí</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+      <li><a href="#skills"     data-i18n="nav.skills">Habilidades</a></li>
+      <li><a href="#projects"   data-i18n="nav.projects">Proyectos</a></li>
+      <li><a href="#contact"    data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btnES" onclick="I18n.setLang('es')">ES</button>
+        <button class="lang-btn"        id="btnEN" onclick="I18n.setLang('en')">EN</button>
+      </div>
+      <button class="hamburger" onclick="Nav.toggleMobile()" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section id="hero">
+      <div class="hero-tag reveal"    data-i18n="hero.tag">Quality Engineering Lead · Test Architecture &amp; Governance</div>
+      <h1 class="hero-name reveal d1">Felipe<br><span class="accent">Bustos</span> Ponce</h1>
+      <p class="hero-subtitle reveal d2">
+        <span class="hl">QA Automation</span> · <span data-i18n="hero.subtitle">Escalabilidad · Gobernanza · DevSecOps</span>
+      </p>
+      <p class="hero-desc reveal d3" data-i18n="hero.desc">
+        Diseño sistemas de calidad escalables que permiten a las organizaciones de ingeniería crecer sin aumentar el riesgo operacional. 10+ años construyendo arquitecturas de testing, frameworks de gobernanza y estrategias de automatización.
+      </p>
+      <div class="hero-cta reveal d4">
+        <a href="#contact" class="btn btn-primary"   data-i18n="hero.cta1">Contáctame</a>
+        <a href="#"        class="btn btn-secondary" id="cvDownload" data-i18n="hero.cta2">Descargar CV</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="hero-stat">
+          <span class="stat-num">10+</span>
+          <span class="stat-label" data-i18n="hero.stat1">años en QA</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label" data-i18n="hero.stat2">empresas internacionales</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">50%</span>
+          <span class="stat-label" data-i18n="hero.stat3">aumento en cobertura automatizada</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">SCL</span>
+          <span class="stat-label">Santiago, Chile</span>
+        </div>
+      </div>
+
+      <!-- Avatar -->
+      <div class="avatar-wrap" aria-hidden="true">
+        <svg class="avatar-hex" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="140,10 258,75 258,205 140,270 22,205 22,75"  fill="none" stroke="rgba(0,200,150,0.2)"  stroke-width="1"/>
+          <polygon points="140,22 246,82 246,198 140,258 34,198 34,82"  fill="rgba(14,21,32,0.95)" stroke="rgba(0,200,150,0.35)" stroke-width="1.5"/>
+          <polygon points="140,40 228,90 228,190 140,240 52,190 52,90"  fill="rgba(14,21,32,0.5)"  stroke="rgba(0,200,150,0.1)"  stroke-width="1"/>
+          <text x="140" y="148" text-anchor="middle" font-family="'Space Mono',monospace" font-size="48" font-weight="700" fill="rgba(0,200,150,0.9)">FBP</text>
+          <text x="140" y="172" text-anchor="middle" font-family="'Sora',sans-serif"      font-size="10" fill="rgba(0,200,150,0.4)" letter-spacing="5">QE LEAD</text>
+          <circle cx="140" cy="10"  r="3" fill="#00c896" opacity="0.8"/>
+          <circle cx="258" cy="75"  r="3" fill="#00c896" opacity="0.5"/>
+          <circle cx="258" cy="205" r="3" fill="#00c896" opacity="0.5"/>
+          <circle cx="140" cy="270" r="3" fill="#00c896" opacity="0.8"/>
+          <circle cx="22"  cy="205" r="3" fill="#00c896" opacity="0.5"/>
+          <circle cx="22"  cy="75"  r="3" fill="#00c896" opacity="0.5"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section id="about">
+      <p class="section-label reveal"    data-i18n="about.label">01 — SOBRE MÍ</p>
+      <h2 class="section-title reveal d1">
+        <span data-i18n="about.title1">Quién soy</span> &amp; <span data-i18n="about.title2">qué hago</span>
+      </h2>
+      <div class="about-grid">
+        <div class="about-text reveal d2">
+          <p data-i18n="about.p1">Soy un Quality Engineering Lead con más de 10 años de experiencia en ingeniería de calidad de software en entornos multinacionales. Me especializo en construir arquitecturas de testing, frameworks de gobernanza y estrategias de automatización que garantizan mantenibilidad a largo plazo y propiedad distribuida.</p>
+          <p data-i18n="about.p2">Mi trabajo se centra en el diseño y estandarización de arquitecturas de prueba, escalabilidad de plataformas de automatización, modelos de gobernanza para equipos distribuidos y alineación estratégica con liderazgo de ingeniería.</p>
+          <p data-i18n="about.p3">Actualmente lidero en ZeroFox la estandarización de prácticas de testing AIO, estableciendo modelos de propiedad compartida y reduciendo silos de conocimiento. Mi foco profesional está evolucionando hacia autoridad técnica en arquitectura de calidad.</p>
+          <div class="tag-list">
+            <span class="tag">Test Architecture</span>
+            <span class="tag">Governance</span>
+            <span class="tag">Automation</span>
+            <span class="tag">DevSecOps</span>
+            <span class="tag">Risk-Based Testing</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Cross-Team Leadership</span>
+            <span class="tag">Shift-Left</span>
+          </div>
+        </div>
+        <div class="about-cards reveal d3">
+          <div class="card card--stat">
+            <span class="stat-num">10+</span>
+            <span class="stat-label" data-i18n="about.stat1">años en QA</span>
+          </div>
+          <div class="card card--stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label" data-i18n="about.stat2">empresas top</span>
+          </div>
+          <div class="card card--stat">
+            <span class="stat-num">–80%</span>
+            <span class="stat-label" data-i18n="about.stat3">defect backlog</span>
+          </div>
+          <div class="card card--stat">
+            <span class="stat-num">+50%</span>
+            <span class="stat-label" data-i18n="about.stat4">cobertura auto</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience">
+      <p class="section-label reveal"    data-i18n="exp.label">02 — EXPERIENCIA</p>
+      <h2 class="section-title reveal d1">
+        <span data-i18n="exp.title1">Trayectoria</span> <span data-i18n="exp.title2">profesional</span>
+      </h2>
+      <div class="timeline" id="timeline">
+        <!-- Rendered by js/experience.js -->
+      </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills">
+      <p class="section-label reveal"    data-i18n="skills.label">03 — HABILIDADES</p>
+      <h2 class="section-title reveal d1">Stack <span data-i18n="skills.title">técnico</span></h2>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Rendered by js/skills.js -->
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects">
+      <p class="section-label reveal"    data-i18n="proj.label">04 — PROYECTOS</p>
+      <h2 class="section-title reveal d1" data-i18n="proj.title">Proyectos destacados</h2>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Rendered by js/projects.js -->
+      </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact">
+      <p class="section-label reveal"    data-i18n="contact.label">05 — CONTACTO</p>
+      <h2 class="section-title reveal d1">
+        <span data-i18n="contact.title1">Hablemos</span> <span data-i18n="contact.title2">hoy</span>
+      </h2>
+      <div class="contact-wrap">
+        <div class="reveal d2">
+          <p class="contact-intro" data-i18n="contact.intro">
+            Disponible para nuevas oportunidades en Quality Engineering, Test Architecture y roles de liderazgo técnico. También abierto a colaboraciones en DevSecOps y Cybersecurity Automation.
+          </p>
+          <div class="contact-links" id="contactLinks">
+            <!-- Rendered by js/contact.js -->
+          </div>
+        </div>
+        <div class="reveal d3">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label class="form-label" data-i18n="form.name">NOMBRE</label>
+              <input type="text"  class="form-input"    id="fname"    required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">EMAIL</label>
+              <input type="email" class="form-input"    id="femail"   required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="form.subject">ASUNTO</label>
+              <input type="text"  class="form-input"    id="fsubject" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="form.message">MENSAJE</label>
+              <textarea           class="form-textarea" id="fmessage" required></textarea>
+            </div>
+            <div class="form-msg" id="formMsg"></div>
+            <button type="submit" class="btn btn-primary form-submit" id="submitBtn" data-i18n="form.send">
+              ENVIAR MENSAJE →
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>&copy; 2025 Felipe Bustos Ponce</span>
+    <span class="footer-sep">—</span>
+    <span data-i18n="footer.text">Construido con precisión, escalado por diseño.</span>
+  </footer>
+
+  <!-- Scripts: data first, then modules, then app init -->
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/experience.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
